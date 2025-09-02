@@ -1,5 +1,6 @@
-import React, { useState } from "react"
-import { cn } from "@/utils/cn"
+import React, { useState } from "react";
+import { cn } from "@/utils/cn";
+import Loading from "@/components/ui/Loading";
 
 const ImageWithFallback = ({ 
   src, 
@@ -14,18 +15,24 @@ const ImageWithFallback = ({
   const [imageError, setImageError] = useState(false)
   const [imageLoading, setImageLoading] = useState(true)
 
-  const handleError = (e) => {
+const handleError = (e) => {
     if (!imageError) {
       setImageError(true)
-      e.target.src = fallbackSrc
+      setImageLoading(false)
+      e.target.src = fallbackSrc || 'https://via.placeholder.com/400x300/FFC1CC/8B4513?text=Image+Not+Available'
       e.target.onerror = null // Prevent infinite loop
     }
     onError?.(e)
   }
-
+  
   const handleLoad = (e) => {
     setImageLoading(false)
     onLoad?.(e)
+  }
+  
+  const retryLoad = () => {
+    setImageError(false)
+    setImageLoading(true)
   }
 
   return (
@@ -36,8 +43,8 @@ const ImageWithFallback = ({
         </div>
       )}
       <img
-        src={src || fallbackSrc}
-        alt={alt}
+src={imageError ? (fallbackSrc || 'https://via.placeholder.com/400x300/FFC1CC/8B4513?text=Image+Not+Available') : src}
+alt={alt}
         className={cn(
           "transition-opacity duration-300",
           imageLoading ? "opacity-0" : "opacity-100"

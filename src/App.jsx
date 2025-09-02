@@ -1,3 +1,4 @@
+import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ToastContainer } from "react-toastify"
 import Layout from "@/components/organisms/Layout"
@@ -7,13 +8,43 @@ import ProductDetail from "@/components/pages/ProductDetail"
 import Cart from "@/components/pages/Cart"
 import Checkout from "@/components/pages/Checkout"
 import OrderConfirmation from "@/components/pages/OrderConfirmation"
+import Error from "@/components/ui/Error"
 import { CartProvider } from "@/hooks/useCart"
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { hasError: false, error: null }
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error }
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Application error:', error, errorInfo)
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <Error 
+          title="Something went wrong"
+          message="We're having trouble loading the application. Please try refreshing the page."
+          onRetry={() => window.location.reload()}
+        />
+      )
+    }
+    return this.props.children
+  }
+}
 
 function App() {
   return (
-    <BrowserRouter>
-      <CartProvider>
-        <div className="min-h-screen bg-background">
+    <ErrorBoundary>
+      <BrowserRouter>
+        <CartProvider>
+          <div className="min-h-screen bg-background">
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -37,9 +68,10 @@ function App() {
             pauseOnHover
             style={{ zIndex: 9999 }}
           />
-        </div>
-      </CartProvider>
-    </BrowserRouter>
+</div>
+        </CartProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
   )
 }
 
