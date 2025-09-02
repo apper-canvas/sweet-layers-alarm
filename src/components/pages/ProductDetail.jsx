@@ -98,10 +98,15 @@ const ProductDetail = () => {
         {/* Image Gallery */}
         <div className="space-y-4">
           <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
-            <img
-              src={product.images[selectedImage]}
-              alt={product.name}
-              className="w-full h-full object-cover"
+<img
+              src={product.images?.[selectedImage] || "https://via.placeholder.com/600x400/FFC1CC/8B4513?text=Image+Not+Available"}
+              alt={`${product.name || 'Product'} - Main view`}
+              className="w-full h-full object-cover transition-opacity duration-300"
+              onError={(e) => {
+                e.target.src = "https://via.placeholder.com/600x400/FFC1CC/8B4513?text=Image+Not+Available"
+                e.target.onerror = null // Prevent infinite loop
+              }}
+              loading="lazy"
             />
           </div>
           
@@ -115,10 +120,15 @@ const ProductDetail = () => {
                     selectedImage === index ? "border-primary" : "border-secondary"
                   }`}
                 >
-                  <img
-                    src={image}
-                    alt={`${product.name} ${index + 1}`}
-                    className="w-full h-full object-cover"
+<img
+                    src={image || "https://via.placeholder.com/100x100/FFC1CC/8B4513?text=N/A"}
+                    alt={`${product.name || 'Product'} view ${index + 1}`}
+                    className="w-full h-full object-cover transition-opacity duration-300"
+                    onError={(e) => {
+                      e.target.src = "https://via.placeholder.com/100x100/FFC1CC/8B4513?text=N/A"
+                      e.target.onerror = null // Prevent infinite loop
+                    }}
+                    loading="lazy"
                   />
                 </button>
               ))}

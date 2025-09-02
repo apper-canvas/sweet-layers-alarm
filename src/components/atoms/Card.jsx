@@ -1,5 +1,5 @@
-import React, { forwardRef } from "react"
-import { cn } from "@/utils/cn"
+import React, { forwardRef } from "react";
+import { cn } from "@/utils/cn";
 
 const Card = forwardRef(({ 
   className, 
@@ -7,11 +7,12 @@ const Card = forwardRef(({
   hover = false,
   ...props 
 }, ref) => {
-  return (
+return (
     <div
       className={cn(
         "bg-white rounded-xl shadow-lg border border-secondary/20 overflow-hidden",
         hover && "card-hover cursor-pointer",
+        "relative", // Support for image loading states
         className
       )}
       ref={ref}

@@ -58,10 +58,15 @@ const HeroSection = () => {
           {/* Hero Image */}
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img 
+<img 
                 src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Beautiful layered cake"
-                className="w-full h-96 lg:h-[600px] object-cover"
+                alt="Beautiful layered cake showcasing our artisanal baking craftsmanship"
+                className="w-full h-96 lg:h-[600px] object-cover transition-opacity duration-300"
+                onError={(e) => {
+                  e.target.src = "https://via.placeholder.com/800x600/FFC1CC/8B4513?text=Sweet+Moments+Bakery"
+                  e.target.onerror = null // Prevent infinite loop
+                }}
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
