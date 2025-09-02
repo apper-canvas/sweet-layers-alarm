@@ -1,17 +1,23 @@
-import React, { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import Button from "@/components/atoms/Button"
-import SearchBar from "@/components/molecules/SearchBar"
-import ApperIcon from "@/components/ApperIcon"
-import { useCart } from "@/hooks/useCart"
-
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { AuthContext } from "../../App";
+import ApperIcon from "@/components/ApperIcon";
+import SearchBar from "@/components/molecules/SearchBar";
+import Button from "@/components/atoms/Button";
+import { useCart } from "@/hooks/useCart";
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const navigate = useNavigate()
-  const { items } = useCart()
-
+const { items } = useCart()
+  const { logout } = useContext(AuthContext)
+  const { user, isAuthenticated } = useSelector((state) => state.user)
+  
   const totalItems = items.reduce((total, item) => total + item.quantity, 0)
-
+  
+  const handleLogout = async () => {
+    await logout()
+  }
   const handleSearch = (query) => {
     if (query.trim()) {
       navigate(`/catalog?search=${encodeURIComponent(query)}`)
@@ -62,7 +68,7 @@ const Header = () => {
 
           {/* Cart & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <Link to="/cart" className="relative">
+<Link to="/cart" className="relative">
               <Button variant="ghost" size="sm" className="relative">
                 <ApperIcon name="ShoppingCart" size={20} />
                 {totalItems > 0 && (
@@ -72,7 +78,34 @@ const Header = () => {
                 )}
               </Button>
             </Link>
-
+            
+            {isAuthenticated && (
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-accent/70">
+                  Hello, {user?.firstName || user?.name || 'User'}
+                </span>
+                <Button variant="ghost" size="sm" onClick={handleLogout}>
+                  <ApperIcon name="LogOut" size={16} />
+                  Logout
+                </Button>
+              </div>
+            )}
+            
+            {!isAuthenticated && (
+              <div className="flex items-center gap-2">
+                <Link to="/login">
+                  <Button variant="ghost" size="sm">
+                    <ApperIcon name="LogIn" size={16} />
+                    Login
+                  </Button>
+                </Link>
+                <Link to="/signup">
+                  <Button variant="primary" size="sm">
+                    Sign Up
+                  </Button>
+</Link>
+              </div>
+            )}
             {/* Mobile Menu Button */}
             <Button
               variant="ghost"
