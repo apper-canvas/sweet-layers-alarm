@@ -1,0 +1,182 @@
+[
+  {
+    "Id": 1,
+    "name": "Classic Chocolate Birthday Cake",
+    "description": "Rich, moist chocolate cake with velvety chocolate buttercream frosting. Perfect for birthday celebrations with customizable decorations.",
+    "price": 45,
+    "images": [
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Birthday",
+    "sizes": ["8 inch", "10 inch", "12 inch"],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.8
+  },
+  {
+    "Id": 2,
+    "name": "Elegant White Wedding Cake",
+    "description": "Three-tier white wedding cake with delicate buttercream roses and pearl details. A timeless classic for your special day.",
+    "price": 120,
+    "images": [
+      "https://images.unsplash.com/photo-1535254973040-607b474cb50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Wedding",
+    "sizes": ["2-tier", "3-tier", "4-tier"],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.9
+  },
+  {
+    "Id": 3,
+    "name": "Rainbow Unicorn Fantasy Cake",
+    "description": "Magical multi-layered rainbow cake with unicorn horn and colorful buttercream decorations. Perfect for children's parties.",
+    "price": 65,
+    "images": [
+      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1607478900766-efe13248b125?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Custom",
+    "sizes": ["8 inch", "10 inch"],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.7
+  },
+  {
+    "Id": 4,
+    "name": "Vanilla Bean Cupcake Set",
+    "description": "Dozen fresh vanilla cupcakes with Madagascar vanilla bean buttercream frosting. Elegantly decorated for any occasion.",
+    "price": 24,
+    "images": [
+      "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Cupcakes",
+    "sizes": ["6 pack", "12 pack", "24 pack"],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.6
+  },
+  {
+    "Id": 5,
+    "name": "Red Velvet Heart Cake",
+    "description": "Romantic heart-shaped red velvet cake with cream cheese frosting. Perfect for anniversaries and Valentine's Day.",
+    "price": 55,
+    "images": [
+      "https://images.unsplash.com/photo-1557142046-c704a3adf364?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Custom",
+    "sizes": ["8 inch", "10 inch"],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.8
+  },
+  {
+    "Id": 6,
+    "name": "Rustic Garden Wedding Cake",
+    "description": "Two-tier semi-naked cake with fresh berries and eucalyptus. Perfect for outdoor and rustic-themed weddings.",
+    "price": 95,
+    "images": [
+      "https://images.unsplash.com/photo-1562440499-64c9a74f0568?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Wedding",
+    "sizes": ["2-tier", "3-tier"],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.9
+  },
+  {
+    "Id": 7,
+    "name": "Funfetti Birthday Celebration",
+    "description": "Classic funfetti cake loaded with colorful sprinkles and vanilla buttercream. A party favorite that brings joy to every celebration.",
+    "price": 40,
+    "images": [
+      "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Birthday",
+    "sizes": ["8 inch", "10 inch", "12 inch"],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.5
+  },
+  {
+    "Id": 8,
+    "name": "Chocolate Ganache Cupcakes",
+    "description": "Rich chocolate cupcakes topped with silky chocolate ganache and gold leaf details. An indulgent treat for chocolate lovers.",
+    "price": 28,
+    "images": [
+      "https://images.unsplash.com/photo-1587668178277-295251f900ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Cupcakes",
+    "sizes": ["6 pack", "12 pack", "24 pack"],
+    "inStock": true,
+    "featured": true,
+    "rating": 4.7
+  },
+  {
+    "Id": 9,
+    "name": "Strawberry Shortcake Dream",
+    "description": "Light vanilla sponge layered with fresh strawberries and whipped cream. A summery delight that's both fresh and indulgent.",
+    "price": 50,
+    "images": [
+      "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Custom",
+    "sizes": ["8 inch", "10 inch"],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.6
+  },
+  {
+    "Id": 10,
+    "name": "Golden Anniversary Cake",
+    "description": "Sophisticated two-tier cake with gold accents and sugar flowers. Perfect for milestone anniversaries and special celebrations.",
+    "price": 85,
+    "images": [
+      "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1606314737175-2d8aa04fe6b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Wedding",
+    "sizes": ["2-tier", "3-tier"],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.8
+  },
+  {
+    "Id": 11,
+    "name": "Sports Theme Birthday Cake",
+    "description": "Custom sports-themed birthday cake featuring your favorite team colors and sport elements. Perfect for sports enthusiasts.",
+    "price": 60,
+    "images": [
+      "https://images.unsplash.com/photo-1588195538326-c5b1e5b2fe86?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Birthday",
+    "sizes": ["8 inch", "10 inch", "12 inch"],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.4
+  },
+  {
+    "Id": 12,
+    "name": "Lemon Blueberry Cupcakes",
+    "description": "Fresh lemon cupcakes with blueberry compote filling and lemon cream cheese frosting. A perfect balance of tart and sweet.",
+    "price": 26,
+    "images": [
+      "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "category": "Cupcakes",
+    "sizes": ["6 pack", "12 pack"],
+    "inStock": true,
+    "featured": false,
+    "rating": 4.7
+  }
+]

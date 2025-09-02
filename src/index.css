@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #FFFBFC;
+  color: #8B4513;
+  line-height: 1.5;
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(233, 30, 99, 0.1);
+}
+
+.Toastify__toast-container {
+  width: auto;
+  max-width: 380px;
+  z-index: 9999;
+}
+
+.Toastify__progress-bar {
+  background: linear-gradient(90deg, #E91E63 0%, #FFC1CC 100%);
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.95) 0%, rgba(76, 175, 80, 0.85) 100%);
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, rgba(244, 67, 54, 0.95) 0%, rgba(244, 67, 54, 0.85) 100%);
+  color: white;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #FFF5F7 0%, #FFC1CC 50%, #FFE4E9 100%);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(233, 30, 99, 0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #E91E63 0%, #F48FB1 100%);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #D81B60 0%, #E91E63 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.3);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(233, 30, 99, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #E91E63 0%, #8B4513 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "Id": 1,
+    "items": [
+      {
+        "productId": 1,
+        "productName": "Classic Chocolate Birthday Cake",
+        "quantity": 1,
+        "size": "10 inch",
+        "price": 45
+      }
+    ],
+    "total": 55.40,
+    "deliveryInfo": {
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "email": "sarah.johnson@example.com",
+      "phone": "(555) 123-4567",
+      "address": "123 Main Street",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001",
+      "deliveryDate": "2024-01-15",
+      "deliveryTime": "2:00 PM - 4:00 PM",
+      "specialInstructions": "Please ring doorbell"
+    },
+    "status": "delivered",
+    "createdAt": "2024-01-10T14:30:00Z"
+  },
+  {
+    "Id": 2,
+    "items": [
+      {
+        "productId": 4,
+        "productName": "Vanilla Bean Cupcake Set",
+        "quantity": 2,
+        "size": "12 pack",
+        "price": 24
+      }
+    ],
+    "total": 61.84,
+    "deliveryInfo": {
+      "firstName": "Michael",
+      "lastName": "Chen",
+      "email": "michael.chen@example.com",
+      "phone": "(555) 987-6543",
+      "address": "456 Oak Avenue",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94102",
+      "deliveryDate": "2024-01-20",
+      "deliveryTime": "10:00 AM - 12:00 PM",
+      "specialInstructions": ""
+    },
+    "status": "confirmed",
+    "createdAt": "2024-01-15T09:15:00Z"
+  }
+]
